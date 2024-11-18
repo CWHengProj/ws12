@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+<body>
+    <div>
+        <p>The numbers are generated here.</p>
+        <!-- do a for each loop here to iterate through all the values in the numberlist-->
+         <span th:each="number: ${numberList}">
+             <span th:text="${number}"></span>
+         </span>
+    </div>
+</body>
+</html>
