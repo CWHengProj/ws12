@@ -7,11 +7,15 @@
 </head>
 <body>
     <div>
-        <p>The numbers are generated here.</p>
-        <!-- do a for each loop here to iterate through all the values in the numberlist-->
-         <span th:each="number: ${numberList}">
-             <span th:text="${number}"></span>
-         </span>
+        <!-- create a form for user to input their value -->
+        <h1><strong>How many numbers do you wish to generate?</strong></h1>
+        <!-- create a text box-->
+        <form th:action= "@{/userSubmit}" method="get">
+            <!--Create a text box for user to enter a value-->
+            <input type="number" name="howMany" min="1" max="10" required >
+            <!--submit button sends us to the next link stated in the link expression-->
+            <button type="submit">Let's Go!</button>
+        </form>
     </div>
 </body>
 </html>

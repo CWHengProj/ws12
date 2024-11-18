@@ -10,7 +10,7 @@ public class GeneratorService {
     List<Integer> numbers = new ArrayList<>();
     public List<Integer> createList(int howMany, int range){
         for (int i=0; i<howMany; i++){
-            int currNo = random.nextInt(0,range);
+            int currNo = random.nextInt(0,range+1);
             if (numbers.contains(currNo)){
                 i--;
             }

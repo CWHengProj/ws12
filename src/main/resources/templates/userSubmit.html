@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User submission</title>
+</head>
+<body>
+    <h1>Local images here</h1>
+    <!-- do a for each loop here to iterate through all the values in the numberlist-->
+    <span th:each="number: ${numberList}"> 
+        <img th:src="'/numbers/number' + ${number} + '_75.jpg'">
+    </span>
+    <!-- do a version for the url based to test if i am doing it correctly-->
+     <br><br>
+     <h1>Link here</h1>
+     <span th:each="number: ${numberList}">
+        <span th:if="${number lt 21}">
+            <img th:src="'https://www.janbrett.com/images/number' + ${number} + '.jpg'" width="11%">
+        </span>
+        <span th:if="${number ge 21}">
+            <img th:src="'https://www.janbrett.com/images/number_' + ${number} + '.jpg'" width="11%">
+        </span>
+     </span>
+</body>
+</html>
